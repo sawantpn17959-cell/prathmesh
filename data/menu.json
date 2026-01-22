@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "name": "Coq au Vin",
+    "category": "main",
+    "price": 350,
+    "description": "Traditional French chicken slow-cooked in wine with herbs",
+    "image": "/assets/images/coq.jpg"
+  },
+  {
+    "id": 2,
+    "name": "French Onion Soup",
+    "category": "starter",
+    "price": 220,
+    "description": "Classic French soup made with caramelized onions, herbs, and melted cheese",
+    "image": "/assets/images/frenchonionsoup.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Beef Bourguignon",
+    "category": "main",
+    "price": 480,
+    "description": " Slow-cooked beef stew with vegetables in rich French sauce",
+    "image": "/assets/images/beefbourguignon.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Crème Brûlée",
+    "category": "dessert",
+    "price": 120,
+    "description": "Creamy custard dessert topped with caramelized sugar",
+    "image": "/assets/images/creambrulee.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Escargots (Garlic Butter Snails)",
+    "category": "starter",
+    "price": 180,
+    "description": " Tender snails cooked in garlic butter and herbs",
+    "image": "/assets/images/escargots.jpg"
+  },
+  {
+    "id": 6,
+    "name": "3. Quiche Lorraine",
+    "category": "starter",
+    "price": 130,
+    "description": "Savory baked pie made with cheese, cream, and vegetables",
+    "image": "/assets/images/quichelorraine.jpg"
+  },
+  {
+    "id": 7,
+    "name": "15. Macarons",
+    "category": "dessert",
+    "price": 160,
+    "description": "Colorful almond-based cookies with soft filling",
+    "image": "/assets/images/macarons.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Salade Niçoise",
+    "category": "starter",
+    "price": 90,
+    "description": "Toasted bread with garlic butter and herbs",
+    "image": "/assets/images/saladenicoise.jpg"
+  }
+]
