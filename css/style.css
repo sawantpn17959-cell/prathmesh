@@ -5,9 +5,9 @@
    ========================================================= */
 :root {
     /* Primary brand colors */
-    --primary: #e24f1c;
-    --primary-light: #f07a4a;
-    --secondary: #d99b49;
+    --primary: #7A1F2B;
+    --primary-light: #f47878;
+    --secondary: #ff6366;
 
     /* Text colors */
     --text-main: #333333;
@@ -285,6 +285,24 @@ h3 {
     margin: 0 auto 2.5rem;
     opacity: 0.85;                  /* slightly muted text */
 }
+/* hero animations */
+.hero-content > * {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: heroFadeup 0.8s ease forwards;
+}
+.hero-badge {animation-delay: 0.2s;}
+.hero-title {animation-delay: 0.4s;}
+.hero-subtitle {animation-delay: 0.6s;}
+.hero-button {animation-delay: 0.8s;}
+
+@keyframes heroFadeup{
+    to{
+        opacity: 1;
+        transform : translateY(0);
+
+    }
+}
 
 /* =========================================================
    BUTTONS
@@ -303,6 +321,7 @@ h3 {
 }
 
 /* Primary filled button */
+
 .btn.primary {
     background: var(--primary);
     color: var(--white);
@@ -310,7 +329,7 @@ h3 {
 
 /* Hover effect for primary button */
 .btn.primary:hover {
-    background: rgba(226, 79, 28, 0.9);
+    background: rgba(28, 226, 81, 0.9);
     transform: translateY(-3px);    /* subtle lift effect */
     box-shadow: 0 10px 20px rgba(211, 84, 0, 0.3);
 }
@@ -564,16 +583,18 @@ h3 {
     font-size: 1.25rem;
 }
 
-/* Menu description text */
 .menu-description {
     color: var(--text-light);
     font-size: 0.95rem;
     margin-bottom: 1.5rem;
+
     display: -webkit-box;
-    -webkit-line-clamp: 2;         /* limits text to 2 lines */
+    -webkit-line-clamp: 2;   /* limits text to 2 lines */
     -webkit-box-orient: vertical;
+
     overflow: hidden;
 }
+
 
 /* =========================================================
    FOOTER
@@ -650,7 +671,7 @@ h3 {
   position: fixed;
   inset: 0;                       /* covers entire viewport */
   background: rgba(0, 0, 0, 0.6);
-  display: none;                  /* hidden by default */
+  /* display: none;                  hidden by default */
   align-items: center;
   justify-content: center;
   z-index: 999;
@@ -675,7 +696,13 @@ h3 {
   background: none;
   border: none;
   cursor: pointer;
+  z-index: 1100;
 }
+
+.modal.active {
+  display: flex;
+}
+
 
 /* Booking form layout */
 .booking-form {
@@ -716,6 +743,7 @@ h3 {
   color: var(--primary);
   font-weight: 600;
   margin-bottom: 1.5rem;
+  font-size: 1.2rem;
 }
 
 /* =========================================================
@@ -920,4 +948,42 @@ h3 {
     padding: 14px;
     font-size: 1rem;
   }
+  /* 
+========================================================
+            Designer intro modal
+   ========================================================= */
+
+   .designer-modal {
+    text-align: center;
+    padding: 2.5rem 2rem;
+    border-radius: 14px;
+    max-width: 380px;
+    animation: scaleIn 0.3s ease;   /* entry animation */
+   }
+
+   /* designer phto */
+   .designer-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 1.2rem;
+    background: #f2f2f2;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+   }
+
+   .designer-img {
+    animation: fadezOOM  0.6s ease ;
+   }
+
+   @keyframes fadezOOM {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
 }

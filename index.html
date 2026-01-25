@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- SEO description -->
-    <meta name="description" content="Delicious Bites - Authentic fine dining in Mumbai." />
+    <meta name="description" content="French Corner - Authentic fine dining in Kolhapur." />
 
     <!-- Page title -->
     <title>Taste of France</title>
@@ -62,9 +62,9 @@
 
             <div class="hero-content container">
                 <span class="hero-badge">Est. 2026</span>
-                <h1 class="hero-title">Authentic Flavors, <br>Fresh Ingredients</h1>
+                <h1 class="hero-title">French Corner, <br>Authentic Flavors, Fresh Ingredients</h1>
                 <p class="hero-subtitle">
-                    Experience culinary excellence crafted with passion in the heart of Mumbai.
+                    Experience culinary excellence crafted with passion in the heart of Kolhapur.
                 </p>
 
                 <!-- Hero buttons -->
@@ -76,7 +76,7 @@
         </section>
 
         <!-- ================= ABOUT SECTION ================= -->
-        <section id="about" class="section about">
+        <section id="about" class="section about reveal">
             <div class="container">
                 <div class="about-grid">
 
@@ -110,7 +110,7 @@
         </section>
 
         <!-- ================= MENU SECTION ================= -->
-        <section id="menu" class="section-light">
+        <section id="menu" class="section light reveal">
             <div class="container">
 
                 <!-- Section header -->
@@ -135,6 +135,7 @@
                     <button class="filter-btn" data-category="starter">Starters</button>
                     <button class="filter-btn" data-category="main">Main Course</button>
                     <button class="filter-btn" data-category="dessert">Desserts</button>
+                    <button class="filter-btn" data-category="drinks">Drinks</button>
                 </div>
 
                 <!-- Menu items container (JS renders here) -->
@@ -154,7 +155,7 @@
                     <h2>Book a Table</h2>
 
                     <!-- Booking form -->
-                    <form class="booking-form">
+                      <form class="booking-form">
                         <input type="text" placeholder="Full Name" required />
                         <input type="tel" placeholder="Phone Number" required />
                         <input type="date" required />
@@ -173,17 +174,18 @@
 
                 </div>
             </div>
+
         </section>
 
     </main>
 
     <!-- ================= FOOTER ================= -->
-    <footer class="footer">
+    <footer class="footer reveal">
         <div class="container footer-grid">
 
             <!-- Brand info -->
             <div class="footer-brand">
-                <h2 class="logo">DB<span>.</span></h2>
+                <h2 class="logo">French<span>.</span></h2>
                 <p>Crafting moments through flavor since 2026.</p>
 
                 <!-- Social icons -->
@@ -206,9 +208,9 @@
             <!-- Contact info -->
             <div class="footer-contact" id="contact">
                 <h4>Visit Us</h4>
-                <p><i class="fas fa-map-marker-alt"></i> Nariman Point, Mumbai, India</p>
-                <p><i class="fas fa-phone"></i> +91 98765 43210</p>
-                <p><i class="fas fa-envelope"></i> hello@deliciousbites.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Ayodhya Park ,kolhapur, India</p>
+                <p><i class="fas fa-phone"></i> +91 9403577897</p>
+                <p><i class="fas fa-envelope"></i> frenchcorner2310@gmail.com</p>
             </div>
 
         </div>
@@ -245,7 +247,29 @@
             <!-- Add to cart -->
             <button class="btn primary full-width">Add to Cart</button>
         </div>
-    </div>
 
+        <!-- DESIGNER INTRO MODAL -->
+     <div class="modal" id="designerModal">
+        <div class="modal-content designer-modal">
+
+            <!-- close button -->
+             <button class="modal-close" id="closeDesignerModal"> &times;</button>
+
+             <!-- Designer image -->
+              <img 
+              src="assets/images/myphoto.jpg"
+              alt="Wesite Designer"
+              class="designer-img"
+              />
+
+              <!-- Designer message  -->
+               <h2 class="designer-title">hello</h2>
+               <p class="designer-text">
+
+                I,<strong> Prathmesh Sawant</strong>, proudly designed this simple ,elegant, and effective website.
+               </p>
+        </div>
+     </div>
+    
 </body>
 </html>

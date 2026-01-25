@@ -5,7 +5,7 @@
     "category": "main",
     "price": 350,
     "description": "Traditional French chicken slow-cooked in wine with herbs",
-    "image": "/assets/images/coq.jpg"
+    "image": "/assets/images/coqauvin1.jpg"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "category": "starter",
     "price": 220,
     "description": "Classic French soup made with caramelized onions, herbs, and melted cheese",
-    "image": "/assets/images/frenchonionsoup.jpg"
+    "image": "/assets/images/frenchonionsoup1.jpg"
   },
   {
     "id": 3,
@@ -21,46 +21,71 @@
     "category": "main",
     "price": 480,
     "description": " Slow-cooked beef stew with vegetables in rich French sauce",
-    "image": "/assets/images/beefbourguignon.jpg"
+    "image": "/assets/images/beefbourguignon1.jpg"
   },
   {
     "id": 4,
-    "name": "Crème Brûlée",
+    "name": "Creme Brulee",
     "category": "dessert",
-    "price": 120,
+    "price": 300,
     "description": "Creamy custard dessert topped with caramelized sugar",
-    "image": "/assets/images/creambrulee.jpg"
+    "image": "/assets/images/cremebrulee1.jpg"
   },
   {
     "id": 5,
     "name": "Escargots (Garlic Butter Snails)",
     "category": "starter",
-    "price": 180,
+    "price": 260,
     "description": " Tender snails cooked in garlic butter and herbs",
-    "image": "/assets/images/escargots.jpg"
+    "image": "/assets/images/escargots1.jpg"
   },
   {
     "id": 6,
     "name": "3. Quiche Lorraine",
     "category": "starter",
-    "price": 130,
+    "price": 340,
     "description": "Savory baked pie made with cheese, cream, and vegetables",
-    "image": "/assets/images/quichelorraine.jpg"
+    "image": "/assets/images/quichelorraine1.jpg"
   },
   {
     "id": 7,
     "name": "15. Macarons",
     "category": "dessert",
-    "price": 160,
+    "price": 230,
     "description": "Colorful almond-based cookies with soft filling",
-    "image": "/assets/images/macarons.jpg"
+    "image": "/assets/images/macarons1.jpg"
   },
   {
     "id": 8,
     "name": "Salade Niçoise",
     "category": "starter",
-    "price": 90,
+    "price": 190,
     "description": "Toasted bread with garlic butter and herbs",
-    "image": "/assets/images/saladenicoise.jpg"
-  }
-]
+    "image": "/assets/images/saladenicoise1.jpg"
+
+  },
+  {
+    "id": 9,
+    "name": "Pate",
+    "category": "starter",
+    "price": 10,
+    "description": "A smooth paste made from meat",
+    "image": "/assets/images/pate.jpg"
+
+  },
+  {
+    "id": 10,
+    "name": "Iced cafe",
+    "category": "drinks",
+    "price": 180,
+    "description": "Iced coffe served cold,often sweetened or with milk",
+    "image": "/assets/images/caffe.jpg"
+  },
+{
+  "id": 11,
+    "name": "Diabolo",
+    "category": "drinks",
+    "price": 150,
+    "description": "French drink made by mixing lemonade with flavoured syrup",
+    "image": "/assets/images/diabolo.jpg"
+}]

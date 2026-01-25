@@ -1,6 +1,3 @@
-js/dataService.js
-
-
 /* =========================================================
    FETCH MENU DATA
    - Fetches menu items from local JSON file
