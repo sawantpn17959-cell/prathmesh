@@ -15,7 +15,7 @@ let menuItems = [];
 // Tracks currently selected category
 let activeCategory = "all";
 
-let currentItemPrice = 0; // base price of selected item
+let currentItemPrice = 0; // base price of the selected item
 
 let isManualScroll = false;
 
@@ -28,7 +28,6 @@ if (window.innerWidth <= 768) {
     el.classList.add("reveal-active");
   });
 }
-
 
 /* =========================================================
    DOM ELEMENT REFERENCES
@@ -65,7 +64,7 @@ const qtyInput = document.getElementById("orderQty");
 const incBtn = document.getElementById("increaseQty");
 const decBtn = document.getElementById("decreaseQty");
 
-// Designer intro modal
+// Designer into modal
 const designerModal = document.getElementById("designerModal");
 const closeDesignerModal = document.getElementById("closeDesignerModal");
 
@@ -185,63 +184,56 @@ function animateCards() {
 }
 
 /* =========================================================
-   SMOOTH SCROLL FOR NAVIGATION LINKS (WITH FIXED NAV OFFSET)
+   SMOOTH SCROLL FOR NAVIGATION LINKS
    ========================================================= */
 document.querySelectorAll(".nav-link").forEach(anchor => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
+    anchor.addEventListener("click", function (e) {
+        e.preventDefault();
 
-    const target = document.querySelector(this.getAttribute("href"));
-    if (!target) return;
+        // Get target section
+        const target = document.querySelector(this.getAttribute("href"));
+        if (!target) return;
 
-    isManualScroll = true;
+        // Smooth scroll with offset for fixed header
+        window.scrollTo({
+            top: target.offsetTop - 80,
+            behavior: "smooth"
+        });
 
-    const yOffset = -90; // height of fixed navbar
-    const y =
-      target.getBoundingClientRect().top +
-      window.pageYOffset +
-      yOffset;
-
-    window.scrollTo({
-      top: y,
-      behavior: "smooth"
+        // Close mobile menu after navigation
+        navList.classList.remove("active");
     });
-
-    // Manually set active link
-    navLinks.forEach(link => link.classList.remove("active"));
-    this.classList.add("active");
-
-    // Close mobile menu
-    navList.classList.remove("active");
-
-    // Re-enable observer after scroll finishes
-    setTimeout(() => {
-      isManualScroll = false;
-    }, 800);
-  });
-});
-
+})
 
 /* =========================================================
-   BOOK TABLE MODAL LOGIC
+   BOOK TABLE MODAL HANDLERS
    ========================================================= */
 bookTableBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  //bookTableModal.style.display = "flex";
-  bookTableModal.classList.add("active");
+    e.preventDefault();
+    bookTableModal.classList.add("active"); // Ye sahi hai (Open karne ke liye)
 });
 
+// Close book table modal
 closeBookTable.addEventListener("click", () => {
-  // bookTableModal.style.display = "none";
-  bookTableModal.classList.remove("active");
+    // bookTableModal.style.display = "none";
+    
+    // Yahan galti thi: .add nahi .remove ayega
+    bookTableModal.classList.remove("active"); 
 });
 
+// Close modal when clicking outside content
 window.addEventListener("click", (e) => {
-  if (e.target === bookTableModal) {
-    // bookTableModal.style.display = "none";
-    bookTableModal.classList.remove("active");
-  }
+    if (e.target === bookTableModal) {
+        // bookTableModal.style.display = "none";
+        
+        // Yahan bhi galti thi: .add nahi .remove ayega
+        bookTableModal.classList.remove("active");
+    }
 });
+
+
+
+//open order model when "add to order button is clicked"
 
 /* =========================================================
    ORDER MODAL LOGIC
@@ -253,22 +245,23 @@ document.addEventListener("click", (e) => {
 
   currentItemPrice = Number(btn.dataset.price);
 
+//   orderItemName.textContent = btn.dataset.name;
+  // Set selected item details
   orderItemName.textContent = btn.dataset.name;
-  //orderItemPrice.textContent = ₹${btn.dataset.price};
+//   orderItemPrice.textContent = `₹${btn.dataset.price}`;
   qtyInput.value = 1;
 
-  orderItemPrice.textContent = `₹${currentItemPrice}`;
-
-  //orderModal.style.display = "flex";
-  orderModal.classList.add("active");
-
+orderItemPrice.textContent = `₹${currentItemPrice}`;
+  // Show order modal
+//   orderModal.style.display = "flex";
+orderModal.classList.add("active");
 });
 
 /* =========================================================
    ORDER MODAL CONTROLS
    ========================================================= */
 closeOrder.addEventListener("click", () => {
-  //orderModal.style.display = "none";
+//   orderModal.style.display = "none";
   orderModal.classList.remove("active");
 });
 
@@ -278,28 +271,29 @@ window.addEventListener("click", (e) => {
   }
 });
 
-/*  Helper function for order modal  */
+// helper function for order modal 
+
 function updateTotalPrice() {
-  const quantity = Number(qtyInput.value);
-  const total = currentItemPrice * quantity;
-  orderItemPrice.textContent = `₹${total}`;
+    const quantity = Number(qtyInput.value);
+    const total = currentItemPrice * quantity;
+    orderItemPrice.textContent = `₹${total}`;
 }
 
 incBtn.addEventListener("click", () => {
-  qtyInput.value = +qtyInput.value + 1;
-  updateTotalPrice();
+    qtyInput.value = +qtyInput.value +1;
+    updateTotalPrice();
 });
 
 decBtn.addEventListener("click", () => {
-  if (qtyInput.value > 1) {
-    qtyInput.value = +qtyInput.value - 1;
-    updateTotalPrice();
-  }
+    if (qtyInput.value > 1) {
+        qtyInput.value = +qtyInput.value - 1;
+        updateTotalPrice();
+    }
 });
 
 /* =========================================================
    DESIGNER INTRO MODAL
-   - Shown only once using localStorage
+   - Shown only once using localStroage
    ========================================================= */
 closeDesignerModal.addEventListener("click", () => {
   //designerModal.style.display = "none";
@@ -308,9 +302,9 @@ closeDesignerModal.addEventListener("click", () => {
 
 window.addEventListener("click", (e) => {
   if (e.target === designerModal) {
-    //designerModal.style.display = "none";
-    designerModal.classList.remove("active");
-  }
+  //designerModal.style.display = "none";
+  designerModal.classList.remove("active");
+ }
 });
 
 /* =========================================================
@@ -363,17 +357,18 @@ sections.forEach(section => navObserver.observe(section));
 /* =========================================================
    DOM CONTENT LOADED
    ========================================================= */
+// Initialize application once DOM is ready
+
 document.addEventListener("DOMContentLoaded", () => {
 
-  // Show designer intro only once
-  const hasSeenDesignerIntro = localStorage.getItem("designerIntroSeen");
+// Show designer intro only once
+const hasSeenDesignerIntro = localStorage.getItem("designer IntroSeen");
 
-  if (!hasSeenDesignerIntro) {
-    //designerModal.style.display = "flex";
-    designerModal.classList.add("active");
-    localStorage.setItem("designerIntroSeen", "true");
-    location.reload();
-  }
+if (!hasSeenDesignerIntro) {
+  //designerModal.style.display = "flex";
+  designerModal.classList.add("active");
+  localStorage.setItem("designerIntroSeen", "true");
+}
 
-  init(); // Initialize menu and filters
+init(); // Initialize menu and filters
 });

@@ -3,21 +3,24 @@
    - Fetches menu items from local JSON file
    - Handles network and parsing errors safely
    ========================================================= */
-export async function fetchMenuData() {
-    try {
-        // Send request to fetch menu data
+
+   export async function fetchMenuData() {
+    try{
+        //send request to featch menu data
         const response = await fetch("data/menu.json");
 
-        // Check if response is successful
-        if (!response.ok) throw new Error("Failed to load menu");
+        //check if response is successful
+        if (!response.ok) throw new Error("Faild to load menu");
 
-        // Parse and return JSON data
+        //parse and return JSON data
         return await response.json();
-    } catch (error) {
-        // Log error for debugging
+    
+    } catch(error) {
+        //log error for debugging 
         console.error(error);
 
-        // Return empty array as fallback to prevent app crash
+        //return empty array as falback to prevent app crush 
         return [];
     }
-}
+    
+   }

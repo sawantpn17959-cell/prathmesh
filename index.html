@@ -1,35 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Character encoding -->
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parth's Kitchen</title>
+<!-- font  -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins" rel="stylesheet">
+ 
 
-    <!-- Responsive viewport for mobile devices -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- SEO description -->
-    <meta name="description" content="French Corner - Authentic fine dining in Kolhapur." />
-
-    <!-- Page title -->
-    <title>Taste of France</title>
-
-    <!-- Main stylesheet -->
-    <link rel="stylesheet" href="css/style.css" />
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome Icons -->
+     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
-
-    <!-- ================= NAVBAR ================= -->
+<!-- ================= NAVBAR ================= -->
     <nav class="navbar">
         <div class="container nav-container">
 
             <!-- Logo -->
-            <a href="#" class="logo">France<span>.</span></a>
+            <a href="#" class="logo">PS<span>.</span></a>
             
             <!-- Navigation links -->
             <ul class="nav-list">
@@ -52,8 +43,7 @@
             </div>
         </div>
     </nav>
-
-    <!-- ================= MAIN CONTENT ================= -->
+<!-- ================= MAIN CONTENT ================= -->
     <main>
 
         <!-- ================= HERO SECTION ================= -->
@@ -62,9 +52,11 @@
 
             <div class="hero-content container">
                 <span class="hero-badge">Est. 2026</span>
-                <h1 class="hero-title">French Corner, <br>Authentic Flavors, Fresh Ingredients</h1>
+                <h1 class="hero-title">Welcome to SAWANT RESTAURANT </h1>
                 <p class="hero-subtitle">
-                    Experience culinary excellence crafted with passion in the heart of Kolhapur.
+                    Eat. Relax. Repeat at sawant restaurant. A cozy place for friends, family & great food.
+
+Because good food brings people together.
                 </p>
 
                 <!-- Hero buttons -->
@@ -82,13 +74,13 @@
 
                     <!-- About image -->
                     <div class="about-image-wrapper">
-                        <img src="assets/images/dinning1.jpg"
+                         <img src="assets/images/dinning1.jpg"
                              alt="Exquisite Dish"
                              class="main-img">
 
                         <!-- Experience badge -->
                         <div class="experience-badge">
-                            <span class="num">20</span>
+                            <span class="num">20+</span>
                             <span class="txt">Years of<br>Excellence</span>
                         </div>
                     </div>
@@ -98,9 +90,12 @@
                         <span class="sub-heading">Fine Dining Experience</span>
                         <h2 class="section-title">Our Culinary Journey</h2>
                         <p>
-                            Experience the true essence of French cuisine, where authentic flavors meet fresh ingredients. Our culinary journey brings classic French recipes to your plate with quality, care, and passion.
+                           Delicious Bites is dedicated to serving fresh, hygienic,and flavorful dishes made from quality ingredients.
+                           </p>
+                        <p>
+                            Located in the heart of Kolhapur, we pride ourselves on exceptional service and a warm atmosphere.
                         </p>
-                        <a href="#menu" class="btn-text">
+                        <a href="#menu" class="btn-text" style="color: blue;">
                             Discover our specialties <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -110,13 +105,13 @@
         </section>
 
         <!-- ================= MENU SECTION ================= -->
-        <section id="menu" class="section light reveal">
+        <section id="menu" class="section-light reveal">
             <div class="container">
 
                 <!-- Section header -->
                 <div class="section-header">
                     <span class="sub-heading">Selection</span>
-                    <h2 class="section-title">From Our Kitchen</h2>
+                    <h2 class="section-title">Prathemesh's Kitchen</h2>
                 </div>
 
                 <!-- Search input -->
@@ -134,8 +129,7 @@
                     <button class="filter-btn active" data-category="all">All Dishes</button>
                     <button class="filter-btn" data-category="starter">Starters</button>
                     <button class="filter-btn" data-category="main">Main Course</button>
-                    <button class="filter-btn" data-category="dessert">Desserts</button>
-                    <button class="filter-btn" data-category="drinks">Drinks</button>
+                    <button class="filter-btn" data-category="desserts">Desserts</button>
                 </div>
 
                 <!-- Menu items container (JS renders here) -->
@@ -143,49 +137,18 @@
 
             </div>
         </section>
-
-        <!-- ================= BOOK TABLE MODAL ================= -->
-        <section>
-            <div class="modal" id="bookTableModal">
-                <div class="modal-content">
-
-                    <!-- Close modal -->
-                    <button class="modal-close" id="closeBookTable">&times;</button>
-
-                    <h2>Book a Table</h2>
-
-                    <!-- Booking form -->
-                      <form class="booking-form">
-                        <input type="text" placeholder="Full Name" required />
-                        <input type="tel" placeholder="Phone Number" required />
-                        <input type="date" required />
-                        <input type="time" required />
-
-                        <select required>
-                            <option value="">Guests</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>4</option>
-                            <option>6+</option>
-                        </select>
-
-                        <button type="submit" class="btn primary">Confirm Booking</button>
-                    </form>
-
-                </div>
-            </div>
-
-        </section>
-
-    </main>
-
-    <!-- ================= FOOTER ================= -->
+</main>
+              
+    
+    
+</body>
+<!-- ================= FOOTER ================= -->
     <footer class="footer reveal">
         <div class="container footer-grid">
 
             <!-- Brand info -->
             <div class="footer-brand">
-                <h2 class="logo">French<span>.</span></h2>
+                <h2 class="logo">PS<span>.</span></h2>
                 <p>Crafting moments through flavor since 2026.</p>
 
                 <!-- Social icons -->
@@ -208,9 +171,10 @@
             <!-- Contact info -->
             <div class="footer-contact" id="contact">
                 <h4>Visit Us</h4>
-                <p><i class="fas fa-map-marker-alt"></i> Ayodhya Park ,kolhapur, India</p>
+                <p><i class="fas fa-map-marker-alt"></i> Ayodhya Park, Kolhapur, Maharastra 416005 </p>
                 <p><i class="fas fa-phone"></i> +91 9403577897</p>
-                <p><i class="fas fa-envelope"></i> frenchcorner2310@gmail.com</p>
+                <p><i class="fas fa-envelope"></i> prathmeshkitchen@gmail.com  </p>
+                <p><i><a href="" target="_blank">📷 Instagram</a></i></p>
             </div>
 
         </div>
@@ -223,53 +187,82 @@
         </div>
     </footer>
 
-    <!-- Main JavaScript file -->
-    <script type="module" src="js/script.js"></script>
+ <!-- Bolok a table modal -->
+<section>
+    <div class="modal" id="bookTableModal">
+        <div class="modal-content">
 
-    <!-- ================= ORDER MODAL ================= -->
-    <div class="modal" id="orderModal">
-        <div class="modal-content order-modal">
+            <!-- close modal -->
+            <button class="modal-close" id="closeBookTable">&times;</button>
 
-            <!-- Close modal -->
-            <button class="modal-close" id="closeOrder">&times;</button>
+                <h2>Book a Table</h2>
 
-            <!-- Selected item details -->
-            <h2 class="order-title" id="orderItemName"></h2>
-            <p class="order-price" id="orderItemPrice"></p>
+                <!--  Booking From -->
+                  <form class="booking-form">
+                    <input type="text" placeholder="Full Name" required />
+                    <input type="tel" placeholder="Mobile Number" required />
+                    <input type="date" required />
+                    <input type="time" required />
 
-            <!-- Quantity controls -->
-            <div class="quantity-control">
-                <button class="qty-btn" id="decreaseQty">−</button>
+                    <select required>
+                        <option value="">Guest</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>4</option>
+                        <option>6+</option>
+                    </select>
+
+                        <button type="submit" class="btn primary">Confirm Booking</button>
+                  </form>  
+
+        </div>
+    </div>
+</section>
+
+<!-- ================= ORDER MODAL ================= -->
+
+<div class="modal" id="orderModal">
+    <div class="modal-content order-modal">
+
+        <!-- close modal -->
+         <button class="modal-close" id="closeOrder">&times;</button>
+
+         <!-- selected items details -->
+          <h2 class="order-title" id="orderItemName"></h2>
+          <p class="order-price" id="orderItemPrice"></p>
+
+            <!-- quantity controls -->
+             <div class="quantity-control">
+                <button class="qty-btn" id="decreaseQty">-</button>
                 <input type="number" id="orderQty" value="1" min="1" />
                 <button class="qty-btn" id="increaseQty">+</button>
             </div>
 
             <!-- Add to cart -->
-            <button class="btn primary full-width">Add to Cart</button>
+            <button class="btn primary full-width" id="addToCartBtn">Add to Cart</button>
         </div>
-
-        <!-- DESIGNER INTRO MODAL -->
-     <div class="modal" id="designerModal">
-        <div class="modal-content designer-modal">
-
-            <!-- close button -->
-             <button class="modal-close" id="closeDesignerModal"> &times;</button>
-
-             <!-- Designer image -->
-              <img 
-              src="assets/images/myphoto.jpg"
-              alt="Wesite Designer"
-              class="designer-img"
-              />
-
-              <!-- Designer message  -->
-               <h2 class="designer-title">hello</h2>
-               <p class="designer-text">
-
-                I,<strong> Prathmesh Sawant</strong>, proudly designed this simple ,elegant, and effective website.
-               </p>
-        </div>
-     </div>
+    </div>
     
-</body>
+<!-- ================= DESIGNER INTRO MODAL ================= -->
+ <div class="modal" id="designerModal">
+    <div class="modal-content designer-modal">
+
+        <!-- Close button -->
+        <button class="modal-close" id="closeDesignerModal">&times;</button>
+     <!-- Designer image -->
+<img
+    src="assets/images/myphoto.jpg"
+    alt="Website Designer"
+    class="designer-img"
+    />
+    <!-- Designer message -->
+    <h2 class="designer-title">Hello </h2>
+    <p class="designer-text">
+        I am, <strong>Prathmesh Sawant👋</strong>, created this Website with passion, thoughtful design, and well-structured code.
+    </p>
+     </div>
+ </div>
+
+
+    <script type="module" src="js/script.js"></script>
 </html>
